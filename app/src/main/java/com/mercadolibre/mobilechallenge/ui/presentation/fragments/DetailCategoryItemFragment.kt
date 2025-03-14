@@ -33,6 +33,7 @@ class DetailCategoryItemFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
         categoryId = arguments?.getString( CATEGORY_ID).toString()
         searchViewModel.getSearchItemCategory(categoryId)
+        binding.cardContainerDetail.visibility = View.GONE
         initObservers()
         binding.goToHomeButton.setOnClickListener {
             searchViewModel.clearResponseCategoryList()
@@ -47,7 +48,10 @@ class DetailCategoryItemFragment: Fragment() {
 
     private fun initObservers() {
         searchViewModel.responseCategoryItem.observe(viewLifecycleOwner) {
-            updateUI(it)
+            it?.let {
+                binding.cardContainerDetail.visibility = View.VISIBLE
+                updateUI(it)
+            }
         }
         searchViewModel.showOrHideLoader.observe(viewLifecycleOwner) { isLoading ->
             showLoading(isLoading)

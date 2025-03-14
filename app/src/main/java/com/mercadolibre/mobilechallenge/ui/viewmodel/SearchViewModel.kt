@@ -25,8 +25,8 @@ class SearchViewModel @Inject constructor(
     val responseCategoryList: LiveData<List<ResponseCategoryList>>
         get() = _responseCategoryList
 
-    private val _responseCategoryItem = MutableLiveData<ResponseCategoryItem>()
-    val responseCategoryItem: LiveData<ResponseCategoryItem>
+    private val _responseCategoryItem = MutableLiveData<ResponseCategoryItem?>()
+    val responseCategoryItem: LiveData<ResponseCategoryItem?>
         get() = _responseCategoryItem
 
     private val _showOrHideLoader = MutableLiveData<Boolean>()
@@ -88,6 +88,7 @@ class SearchViewModel @Inject constructor(
      */
     fun clearResponseCategoryList() {
         _responseCategoryList.value = emptyList()
+        _responseCategoryItem.value = null
     }
 
 }
