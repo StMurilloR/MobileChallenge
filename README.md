@@ -1,5 +1,5 @@
 
-# MercadoLibre Mobile Challenge
+# 📲 MercadoLibre Mobile Challenge
 
 This project is a technical test made for MercadoLibre. It is an app where the user can perform searches, as described below:
 
