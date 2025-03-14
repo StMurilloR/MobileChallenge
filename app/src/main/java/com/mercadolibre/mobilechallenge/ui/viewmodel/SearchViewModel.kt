@@ -1,6 +1,5 @@
 package com.mercadolibre.mobilechallenge.ui.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -48,7 +47,6 @@ class SearchViewModel @Inject constructor(
                 query,
                 object : ServiceUseCaseResponse<List<ResponseCategoryList>> {
                     override fun onSuccess(result: List<ResponseCategoryList>) {
-                        Log.e("TAG-48", "Result: $result")
                         _showOrHideLoader.postValue(false)
                         _responseCategoryList.postValue( result)
                     }
@@ -72,7 +70,6 @@ class SearchViewModel @Inject constructor(
                 query,
                 object : ServiceUseCaseResponse<ResponseCategoryItem> {
                     override fun onSuccess(result: ResponseCategoryItem) {
-                        Log.e("TAG-48", "Result: $result")
                         _showOrHideLoader.postValue(false)
                         _responseCategoryItem.postValue( result)
                     }

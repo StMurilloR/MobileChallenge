@@ -27,11 +27,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
     }
     buildFeatures {
         viewBinding = true
@@ -50,6 +50,12 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    // Dependencias de pruebas
+    testImplementation(libs.mockk)
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.kotlin)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.androidx.core.testing)
     // Retrofit
     implementation (libs.retrofit)
     implementation (libs.converter.gson)
@@ -59,12 +65,15 @@ dependencies {
     implementation (libs.androidx.lifecycle.viewmodel.ktx)
     // LiveData
     implementation (libs.androidx.lifecycle.livedata.ktx)
+    // Dagger Hilt
     implementation(libs.dagger.hilt.android)
     kapt(libs.dagger.hilt.android.compiler)
-    implementation("com.github.bumptech.glide:glide:4.16.0")
+    //Glide
+    implementation(libs.glide)
+    kapt(libs.glide.compiler)
 }
 
-// Allow references to generated code
+
 kapt {
     correctErrorTypes = true
 }
