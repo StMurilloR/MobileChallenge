@@ -1,0 +1,42 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MobileChallenge" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorSecondary">@color/yellow_basic</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorSecondary</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.MobileChallenge.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:translationZ">10dp</item>
+        <item name="android:backgroundTint">@color/yellow_basic</item>
+    </style>
+
+    <style name="AcceptButton" parent="NormalButton">
+        <item name="backgroundTint">?attr/colorSecondary</item>
+        <item name="strokeWidth">@dimen/button_default_stroke_width</item>
+    </style>
+
+    <style name="NormalButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="shapeAppearanceOverlay">@style/SellButtonShape</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="fontFamily">@font/gilroy_bold</item>
+        <item name="android:textSize">@dimen/font_medium</item>
+        <item name="android:letterSpacing">@dimen/letter_spacing</item>
+        <item name="android:insetTop">@dimen/button_inset</item>
+        <item name="android:insetBottom">@dimen/button_inset</item>
+    </style>
+
+    <style name="SellButtonShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">10dp</item>
+        <item name="cornerSizeBottomLeft">10dp</item>
+        <item name="cornerSizeTopRight">10dp</item>
+        <item name="cornerSizeBottomRight">10dp</item>
+    </style>
+
+</resources>

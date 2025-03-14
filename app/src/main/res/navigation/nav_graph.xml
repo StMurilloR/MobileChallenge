@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.mercadolibre.mobilechallenge.ui.presentation.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_resultSearchFragment"
+            app:destination="@id/resultSearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultSearchFragment"
+        android:name="com.mercadolibre.mobilechallenge.ui.presentation.fragments.ResultSearchFragment"
+        android:label="fragment_result_search"
+        tools:layout="@layout/fragment_result_search" >
+        <action
+            android:id="@+id/action_resultSearchFragment_to_detailCategoryItemFragment"
+            app:destination="@id/detailCategoryItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailCategoryItemFragment"
+        android:name="com.mercadolibre.mobilechallenge.ui.presentation.fragments.DetailCategoryItemFragment"
+        android:label="fragment_detail_category_item"
+        tools:layout="@layout/fragment_detail_category_item" >
+        <action
+            android:id="@+id/action_detailCategoryItemFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>

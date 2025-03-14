@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Mobile Challenge</string>
+
+    <string name="not_name">Sin nombre</string>
+    <string name="total_items">Total de ítems: </string>
+    <string name="not_route">Sin ruta</string>
+    <string name="route">Ruta:</string>
+    <string name="not_available">No disponible</string>
+    <string name="not_register">N/A</string>
+    <string name="purchasing_modes">Modos de compra: </string>
+    <string name="conditions">Condiciones: </string>
+    <string name="minimum_price">Precio mínimo: </string>
+    <string name="maximum_price">Precio máximo: </string>
+    <string name="options_send">Opciones de envío: </string>
+    <string name="not_search">No hay opciones para tu búsqueda.</string>
+    <string name="approved_transaction">APROBADA</string>
+    <string name="welcome">🔥Conoce las ofertas, inicia tu busqueda🔥</string>
+    <string name="search_all">Buscar productos, marcas y más</string>
+    <string name="loading">Cargando, por favor espere…</string>
+    <string name="error">Error</string>
+    <string name="go_to_home">Regresar al inicio</string>
+</resources>
