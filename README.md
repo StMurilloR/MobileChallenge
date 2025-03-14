@@ -23,7 +23,6 @@ This project is a technical test made for MercadoLibre. It is an app where the u
 * Retrofit: is the class through which your API interfaces are turned into callable objects. By default, Retrofit will give you sane defaults for your platform but it allows for customization.
 * Kotlin: Modern language for Android development, offering a cleaner syntax and better null safety.
 
-      [versions]
       agp = "8.6.0"
       kotlin = "1.9.0"
       coreKtx = "1.15.0"
@@ -41,6 +40,12 @@ This project is a technical test made for MercadoLibre. It is an app where the u
       lifecycleRuntimeKtx = "2.8.7"
       daggerHilt = "2.51.1"
       kotlinxSerializationJson = "1.6.3"
+      glide = "4.16.0"
+      mockk = "1.13.8"
+      mockito = "4.5.1"
+      mockitoKotlin = "4.1.0"
+      coroutinesTest = "1.6.4"
+      coreTesting = "2.1.0"
       
       [libraries]
       androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -61,6 +66,13 @@ This project is a technical test made for MercadoLibre. It is an app where the u
       androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleRuntimeKtx" }
       dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "daggerHilt"}
       dagger-hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "daggerHilt"}
+      glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+      glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+      mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+      mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+      mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockitoKotlin" }
+      kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutinesTest" }
+      androidx-core-testing = { module = "androidx.arch.core:core-testing", version.ref = "coreTesting" }
 
 ## Installation & Setup
 
